@@ -1,0 +1,42 @@
+// ParentComponent.js
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+function App() {
+  const message = "Hello from Parent!";
+  return (
+    <div>
+      <h1>Parent Component</h1>
+    
+      <ChildComponent message={message} />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+// ChildComponent.js
+import React from 'react';
+
+function ChildComponent(props) {
+  return (
+    <div>
+      <h2>Child Component</h2>
+      <p>{props.message}</p>    
+    </div>
+  );
+}
+
+export default ChildComponent;
+
+
+
+
+OUTPUT
+
+Parent Component      ........h1
+Child Component         .........h2
+Hello from Parent!      .....p
+
